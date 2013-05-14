@@ -3,6 +3,7 @@ var keycode = require("keycode");
 function System(options) {
   this.keys = [];
 
+  options = options || {};
   options.stop = options.stop || [];
 
   document.addEventListener("keydown", function (e) {
