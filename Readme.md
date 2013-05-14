@@ -12,11 +12,16 @@ Keyboard input system for the whirlibulf game engine.
 Register the system:
 
     var Keyboard = require('keyboard-system');
-    game.addSystem(new Keyboard());
+    game.addSystem(new Keyboard({
+      stop: ['up', 'down', 'left', 'right']
+    }));
 
-The system does not take any options.
+The system reads one property from the options object, `stop`.
 
-Currently the system automatically prevents propagation of all keyboard events.
+This is a list of keys for which each event will not be propagated.
+
+This is useful when you do not want the key to perform its regular browser function,
+such as moving with arrows keys or pressing tab.
 
 ### Keyboard Component
 

@@ -3,18 +3,28 @@ var keycode = require("keycode");
 function System(options) {
   this.keys = [];
 
-  document.addEventListener("keydown", function (e) {
-    e.preventDefault();
-    e.stopPropagation();
+  options.stop = options.stop || [];
 
-    this.keys[keycode(e.keyCode || e.which)] = true;
+  document.addEventListener("keydown", function (e) {
+    var key = keycode(e.keyCode || e.which);
+
+    if (options.stop.indexOf(key) !== -1) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+
+    this.keys[key] = true;
   });
 
   document.addEventListener("keyup", function (e) {
-    e.preventDefault();
-    e.stopPropagation();
+    var key = keycode(e.keyCode || e.which);
 
-    this.keys[keycode(e.keyCode || e.which)] = false;
+    if (options.stop.indexOf(key) !== -1) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+
+    this.keys[key] = false;
   });
 }
 
