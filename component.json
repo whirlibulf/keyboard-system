@@ -1,0 +1,19 @@
+{
+  "name": "keyboard-system",
+  "repo": "whirlibulf/keyboard-system",
+  "description": "A keyboard input system for the whirlibulf game engine",
+  "version": "0.0.1",
+  "keywords": [
+    "whirlibulf",
+    "keyboard"
+  ],
+  "dependencies": {
+    "timoxley/keycode": "*"
+  },
+  "development": {},
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js"
+  ]
+}
