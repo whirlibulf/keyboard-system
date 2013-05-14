@@ -19,16 +19,14 @@ function System(options) {
 }
 
 System.prototype.init = function (engine) {
+  var that = this;
+
   console.log("Keyboard system loaded");
   this.engine = engine;
 
   this.engine.addComponent('keyboard', function (options) {
-    return engine.createComponent(options);
+    return that.keys;
   });
-};
-
-System.prototype.createComponent = function (options) {
-  return this.keys;
 };
 
 module.exports = System;

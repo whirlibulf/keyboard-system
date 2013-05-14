@@ -9,8 +9,6 @@ Keyboard input system for the whirlibulf game engine.
 
 ## Usage
 
-This system automatically adds a `keyboard` component to the game engine.
-
 Register the system:
 
     var Keyboard = require('keyboard-system');
@@ -20,7 +18,13 @@ The system does not take any options.
 
 Currently the system automatically prevents propagation of all keyboard events.
 
+### Keyboard Component
+
+This system automatically adds a `keyboard` component to the game engine.
+
 The component is a map of key names to boolean pressed statuses.
+
+When adding the component to a game object, it does not take any options.
 
     game.addComponentToObject('object id', 'keyboard');
 
