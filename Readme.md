@@ -29,6 +29,9 @@ This system automatically adds a `keyboard` component to the game engine.
 
 The component is a map of key names to boolean pressed statuses.
 
+**WARNING**: Do not write or modify the component object in any way.
+The component object is shared across all keyboard instances.
+
 When adding the component to a game object, it does not take any options.
 
     game.addComponentToObject('object id', 'keyboard');
