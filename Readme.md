@@ -18,6 +18,8 @@ Register the system:
 
 The system does not take any options.
 
+Currently the system automatically prevents propagation of all keyboard events.
+
 The component is a map of key names to boolean pressed statuses.
 
     game.addComponentToObject('object id', 'keyboard');
