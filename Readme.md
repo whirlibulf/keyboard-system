@@ -69,7 +69,7 @@ List of special key names:
 * ]
 * '
 * numpad [0-9]
-* f[1-12] (function keys)
+* f[1-12]
 
 
 
