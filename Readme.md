@@ -30,6 +30,8 @@ The component is a map of key names to boolean pressed statuses.
     //if the letter 'a' is pressed, then keyboard['a'] === true
     //if the number 6 is pressed, then keyboard['6'] === true
 
+**IMPORTANT**: If a key is not pressed, then `keyboard['key']` can be either `false` OR `undefined`.
+
 If you want to check for `shift + a` (capital A), then you need to make sure both
 `keyboard['shift']` and `keyboard['a']` are `true`.
 
@@ -70,7 +72,6 @@ List of special key names:
 * '
 * numpad [0-9]
 * f[1-12]
-
 
 
 ## License
