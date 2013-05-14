@@ -1,6 +1,7 @@
 var keycode = require("keycode");
 
 function System(options) {
+  var that = this;
   this.keys = [];
 
   options = options || {};
@@ -14,7 +15,7 @@ function System(options) {
       e.stopPropagation();
     }
 
-    this.keys[key] = true;
+    that.keys[key] = true;
   });
 
   document.addEventListener("keyup", function (e) {
@@ -25,7 +26,7 @@ function System(options) {
       e.stopPropagation();
     }
 
-    this.keys[key] = false;
+    that.keys[key] = false;
   });
 }
 
