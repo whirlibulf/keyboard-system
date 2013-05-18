@@ -36,7 +36,7 @@ System.prototype.init = function (engine) {
   console.log("Keyboard system loaded");
   this.engine = engine;
 
-  this.engine.addComponent('keyboard', function (options) {
+  this.engine.use('keyboard', function (options) {
     return that.keys;
   });
 };

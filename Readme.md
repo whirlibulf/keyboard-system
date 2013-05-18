@@ -12,7 +12,7 @@ Keyboard input system for the whirlibulf game engine.
 Register the system:
 
     var Keyboard = require('keyboard-system');
-    game.addSystem(new Keyboard({
+    game.use(new Keyboard({
       stop: ['up', 'down', 'left', 'right']
     }));
 
@@ -34,9 +34,9 @@ The component object is shared across all keyboard instances.
 
 When adding the component to a game object, it does not take any options.
 
-    game.addComponentToObject('object id', 'keyboard');
+    game.add('object id', 'keyboard');
 
-    var keyboard = game.getComponentInstance('object id', 'keyboard');
+    var keyboard = game.get('object id', 'keyboard');
 
     //if space bar is pressed, then keyboard['space'] === true
     //if the letter 'a' is pressed, then keyboard['a'] === true
